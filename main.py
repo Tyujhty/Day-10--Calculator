@@ -23,4 +23,20 @@ operations = {
     "/": divide
 }
 
+num1 = int(input("What is the first number?: "))
+num2 = int(input("What is the seconde number?: "))
 
+for operator in operations:
+    print(operator)
+
+
+answer = 0
+operation_symbole = input("Pick an operation from the line above: ")
+
+def calculate(num1, num2, operation_symbole):
+    answer = operations[operation_symbole](num1, num2)
+    return answer
+
+calculate(num1, num2, operation_symbole)
+
+print(f"{num1} {operation_symbole} {num2} = {answer}")
